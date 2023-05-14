@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Character.hpp"
+#include "Character.cpp"
 
 namespace ariel
 {
     class Cowboy : public Character
     {
         int _num_Of_bolls;
-        char _type;
+        char _type = 'C';
 
         Cowboy(Point location, std::string name);
         Cowboy(std::string name);

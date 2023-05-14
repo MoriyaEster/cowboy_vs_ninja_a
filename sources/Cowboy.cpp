@@ -1,12 +1,11 @@
 #include "Cowboy.hpp"
-#include "Character.hpp"
+#include "Character.cpp"
 
 using namespace ariel;
 
 Cowboy::Cowboy(Point location, std::string name)
     : Character(location, 110, name)
 {
-    _type = 'C';
     _num_Of_bolls = 6;
 }
 
