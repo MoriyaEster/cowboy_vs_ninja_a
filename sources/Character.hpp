@@ -17,16 +17,16 @@ namespace ariel
     {
 
         Point _location;
-        int _damage;
+        int _self_Hit;
         std::string _name;
 
     public:
-        Character(Point location, int damage, std::string name);
+        Character(Point location, int self_Hit, std::string name);
         Character();
 
         void setLocation(Point location);
-        int getDamage();
-        void setDamage(int damage);
+        int getself_Hit();
+        void setself_Hit(int self_Hit);
 
         bool isAlive();
         double distance(Character &other);

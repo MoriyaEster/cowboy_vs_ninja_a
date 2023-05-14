@@ -5,18 +5,18 @@ namespace ariel
     using namespace std;
 
     // ************************************************************************//
-    Character::Character(Point location, int damage, std::string name)
-        : _location(location), _damage(damage), _name(name)
+    Character::Character(Point location, int self_Hit, std::string name)
+        : _location(location), _self_Hit(self_Hit), _name(name)
     {
         _location = location;
-        _damage = _damage;
+        _self_Hit = _self_Hit;
         _name = name;
     }
 
     Character::Character()
     {
         _location = Point();
-        _damage = 0;
+        _self_Hit = 0;
         _name = "Computer";
     }
 
@@ -26,20 +26,20 @@ namespace ariel
     {
         this->_location = location;
     }
-    int Character::getDamage()
+    int Character::getself_Hit()
     {
-        return this->_damage;
+        return this->_self_Hit;
     }
-    void Character::setDamage(int damage)
+    void Character::setself_Hit(int self_Hit)
     {
-        this->_damage = damage;
+        this->_self_Hit = self_Hit;
     }
 
     // ************************************************************************//
 
     bool Character::isAlive()
     {
-        if (_damage)
+        if (_self_Hit)
         {
             return true;
         }
@@ -68,7 +68,7 @@ namespace ariel
 
     void Character::print()
     {
-        cout << "The name of the character: " << this->getName() << " , The num of damage: " << this->getDamage() << " , The location of the character is: ";
+        cout << "The name of the character: " << this->getName() << " , The num of self_Hit: " << this->getself_Hit() << " , The location of the character is: ";
         (this->getLocation()).print();
     }
 }
