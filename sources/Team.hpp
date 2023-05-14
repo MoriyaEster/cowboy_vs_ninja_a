@@ -5,9 +5,22 @@
 #include <sstream>
 #include <stdexcept>
 #include <cassert>
+#include <vector>
 
 #include "Point.cpp"
 #include "Character.cpp"
 #include "Cowboy.cpp"
 #include "Ninja.cpp"
-namespace  ariel{}
+namespace ariel
+{
+
+    class Team
+    {
+    public:
+        vector<Character> team;
+        Character *leader;
+
+        Team(Character *lea)
+    };
+
+}
