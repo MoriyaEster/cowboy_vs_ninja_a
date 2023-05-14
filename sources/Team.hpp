@@ -17,10 +17,13 @@ namespace ariel
     class Team
     {
     public:
-        vector<Character> team;
+        vector <Character> team;
         Character *leader;
 
-        Team(Character *lea)
+        Team(Character *leader);
+        void add(Character *player);
+        
+
     };
 
 }
