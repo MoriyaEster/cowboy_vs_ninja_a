@@ -13,24 +13,26 @@
 namespace ariel
 {
 
-    class Character{
+    class Character
+    {
 
         Point _location;
         int _damage;
         std::string _name;
 
-        public:
+    public:
+        Character(Point location, int damage, std::string name);
+        Character();
 
-            Character(Point location, int damage, std::string name);
-            Character();
+        void setLocation(Point location);
+        int getDamage();
+        void setDamage(int damage);
 
-            Point getLocation();
-            void setLocation(Point location);
-            int getDamage();
-            void setDamage(int damage);
-            std::string getName();
-
-
-
+        bool isAlive();
+        double distance(Character &other);
+        void hit(int value);
+        std::string getName();
+        Point getLocation();
+        void print();
     };
 }

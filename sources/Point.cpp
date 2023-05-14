@@ -1,47 +1,52 @@
 #include "Point.hpp"
 
-using namespace ariel;
-using namespace std;
-
-Point::Point(double x, double y)
+namespace ariel
 {
-    _x = x;
-    _y = y;
-}
 
-Point::Point()
-{
-    _x = 0.0;
-    _y = 0.0;
-}
+    using namespace std;
 
-Point::Point(Point &other)
-{
-    _x = other.getX();
-    _x = other.getY();
-}
+    Point::Point(double x, double y)
+    {
+        _x = x;
+        _y = y;
+    }
 
-double Point::distance(Point dest)
-{
-    double dx = dest.getX() - _x;
-    double dy = dest.getY() - _y;
-    return std::sqrt(dx * dx + dy * dy);
-}
+    Point::Point()
+    {
+        _x = 0.0;
+        _y = 0.0;
+    }
 
-double Point::getX()
-{
-    return this->_x;
-}
+    Point::Point(Point &other)
+    {
+        _x = other.getX();
+        _x = other.getY();
+    }
 
-double Point::getY()
-{
-    return this->_y;
-}
+    double Point::distance(Point dest)
+    {
+        double dx = dest.getX() - _x;
+        double dy = dest.getY() - _y;
+        return std::sqrt(dx * dx + dy * dy);
+    }
 
-void Point::print(){
-    cout << "(" << _x << "," << _y << ")" << endl;
-}
+    double Point::getX()
+    {
+        return this->_x;
+    }
 
-Point Point::moveTowards(Point src, Point dst, double dis){
-    return src;
+    double Point::getY()
+    {
+        return this->_y;
+    }
+
+    void Point::print()
+    {
+        cout << "(" << _x << "," << _y << ")" << endl;
+    }
+
+    Point Point::moveTowards(Point src, Point dst, double dis)
+    {
+        return src;
+    }
 }
