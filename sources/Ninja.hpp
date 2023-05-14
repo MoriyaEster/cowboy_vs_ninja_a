@@ -12,7 +12,7 @@ namespace ariel
         char _type = 'N';
 
         Ninja(Point location, int self_Hit, std::string name, int speed);
-        Ninja(std::string name);
+        // Ninja(std::string name);
 
         void move(Character *target);
         void slash(Character *target);
