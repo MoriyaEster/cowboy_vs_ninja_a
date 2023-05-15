@@ -7,10 +7,13 @@
 #include <cassert>
 #include <vector>
 
-#include "Point.cpp"
-#include "Character.cpp"
-#include "Cowboy.cpp"
-#include "Ninja.cpp"
+#include "Point.hpp"
+#include "Character.hpp"
+#include "Cowboy.hpp"
+#include "Ninja.hpp"
+#include "YoungNinja.hpp"
+#include "OldNinja.hpp"
+#include "TrainedNinja.hpp"
 namespace ariel
 {
 

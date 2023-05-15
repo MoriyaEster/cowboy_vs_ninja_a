@@ -1,13 +1,14 @@
 #pragma once
 
-#include "Ninja.cpp"
+#include "Ninja.hpp"
 
 namespace ariel
 {
 
     class TrainedNinja : public Ninja
     {
-        TrainedNinja(Point location, std::string name);
-        // TrainedNinja(std::string name);
+
+    public:
+        TrainedNinja(std::string name, Point location);
     };
 }

@@ -8,7 +8,7 @@
 #include <cassert>
 #include <stdio.h>
 #include <cmath>
-#include "Point.cpp"
+#include "Point.hpp"
 
 namespace ariel
 {
@@ -33,6 +33,6 @@ namespace ariel
         void hit(int value);
         std::string getName();
         Point getLocation();
-        void print();
+        std::string print();
     };
 }

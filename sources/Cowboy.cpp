@@ -3,7 +3,7 @@
 
 using namespace ariel;
 
-Cowboy::Cowboy(Point location, std::string name)
+Cowboy::Cowboy(std::string name, Point location)
     : Character(location, 110, name)
 {
     _num_Of_bolls = 6;

@@ -9,8 +9,9 @@ namespace ariel
         int _num_Of_bolls;
         char _type = 'C';
 
-        Cowboy(Point location, std::string name);
-        Cowboy(std::string name);
+    public:
+        Cowboy(std::string name, Point location);
+        // Cowboy(std::string name);
 
         void shoot(Character *target);
         bool hasboolets();

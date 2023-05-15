@@ -1,6 +1,6 @@
 #include "Ninja.hpp"
-#include "Character.cpp"
-#include "Point.cpp"
+#include "Character.hpp"
+#include "Point.hpp"
 
 using namespace ariel;
 

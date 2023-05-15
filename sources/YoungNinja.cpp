@@ -1,10 +1,10 @@
-#include "Ninja.cpp"
+#include "Ninja.hpp"
 #include "YoungNinja.hpp"
-#include "Character.cpp"
+#include "Character.hpp"
 
 using namespace ariel;
 
-YoungNinja::YoungNinja(Point location, std::string name)
+YoungNinja::YoungNinja(std::string name, Point location)
     :Ninja(location, 120, name, 12)
 {
 }

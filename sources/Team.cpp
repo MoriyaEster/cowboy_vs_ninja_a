@@ -9,4 +9,5 @@ Team::Team(Character *leader)
 
 void Team::add(Character *player)
 {
+
 }

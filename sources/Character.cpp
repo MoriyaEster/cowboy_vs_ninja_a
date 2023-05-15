@@ -66,9 +66,12 @@ namespace ariel
         return this->_location;
     }
 
-    void Character::print()
+    std::string Character::print()
     {
-        cout << "The name of the character: " << this->getName() << " , The num of self_Hit: " << this->getself_Hit() << " , The location of the character is: ";
+        std::ostringstream oss;
+        oss << "The name of the character: " << this->getName() << " , The num of self_Hit: " << this->getself_Hit() << " , The location of the character is: ";
         (this->getLocation()).print();
+        return oss.str();
     }
+
 }

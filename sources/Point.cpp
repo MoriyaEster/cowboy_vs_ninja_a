@@ -49,4 +49,14 @@ namespace ariel
     {
         return src;
     }
+
+    // Point &Point::operator=(const Point &other)
+    // {
+    //     if (this != &other)
+    //     {
+    //         _x = other._x;
+    //         _y = other._y;
+    //     }
+    //     return *this;
+    // }
 }
