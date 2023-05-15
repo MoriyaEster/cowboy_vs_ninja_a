@@ -10,8 +10,8 @@ namespace ariel
 
     public:
         YoungNinja(std::string name, Point location);
-        YoungNinja(const YoungNinja& other);
+        YoungNinja(const YoungNinja &other);
         ~YoungNinja();
-        bool operator==(const YoungNinja& other) const;
+        bool operator==(const YoungNinja &other) const;
     };
 }

@@ -25,6 +25,9 @@ namespace ariel
 
         Team(Character *leader);
         void add(Character *player);
+        void attack(Team * enemy);
+        int stillAlive();
+        void print();
         
 
     };

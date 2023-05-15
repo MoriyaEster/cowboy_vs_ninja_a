@@ -15,7 +15,7 @@ namespace ariel
     {
     }
 
-    Character::Character(const Character& other)
+    Character::Character(const Character &other)
         : _location(other._location), _self_Hit(other._self_Hit), _name(other._name)
     {
     }
@@ -24,7 +24,7 @@ namespace ariel
     {
     }
 
-    Character& Character::operator=(const Character& other)
+    Character &Character::operator=(const Character &other)
     {
         if (this != &other)
         {
@@ -35,7 +35,7 @@ namespace ariel
         return *this;
     }
 
-    bool Character::operator==(const Character& other) const
+    bool Character::operator==(const Character &other) const
     {
         return (_location == other._location && _self_Hit == other._self_Hit && _name == other._name);
     }

@@ -47,7 +47,7 @@ char Cowboy::getType()
     return _type;
 }
 
-bool Cowboy::operator==(const Cowboy& other)
+bool Cowboy::operator==(const Cowboy &other)
 {
     return true;
 }

@@ -2,9 +2,9 @@
 
 using namespace ariel;
 
-Team::Team(Character *leader) : leader(leader)
+Team::Team(Character *leader)
+    : leader(leader)
 {
-    team.push_back(leader);
 }
 
 // Team::Team(const Team &other)
@@ -19,14 +19,9 @@ Team::Team(Character *leader) : leader(leader)
 //     }
 // }
 
-Team::~Team()
-{
-    delete leader;
-    for (auto &player : team)
-    {
-        delete player;
-    }
-}
+// Team::~Team()
+// {
+// }
 
 // Team &Team::operator=(const Team &other)
 // {
@@ -71,8 +66,17 @@ Team::~Team()
 
 void Team::add(Character *player)
 {
-    if (player)
-    {
-        team.push_back(player);
-    }
+}
+
+void Team::attack(Team *enemy)
+{
+}
+
+int Team::stillAlive()
+{
+    return 0;
+}
+
+void Team::print()
+{
 }

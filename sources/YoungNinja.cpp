@@ -5,11 +5,11 @@
 using namespace ariel;
 
 YoungNinja::YoungNinja(std::string name, Point location)
-    :Ninja(location, 100, name, 14)
+    : Ninja(location, 100, name, 14)
 {
 }
 
-YoungNinja::YoungNinja(const YoungNinja& other)
+YoungNinja::YoungNinja(const YoungNinja &other)
     : Ninja(other)
 {
 }
@@ -18,7 +18,7 @@ YoungNinja::~YoungNinja()
 {
 }
 
-bool YoungNinja::operator==(const YoungNinja& other) const
+bool YoungNinja::operator==(const YoungNinja &other) const
 {
-    return (static_cast<const Ninja&>(*this) == static_cast<const Ninja&>(other));
+    return (static_cast<const Ninja &>(*this) == static_cast<const Ninja &>(other));
 }
