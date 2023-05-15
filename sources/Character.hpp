@@ -23,6 +23,11 @@ namespace ariel
     public:
         Character(Point location, int self_Hit, std::string name);
         Character();
+        Character(const Character& other);
+        ~Character();
+
+        Character& operator=(const Character& other);
+        bool operator==(const Character& other) const;
 
         void setLocation(Point location);
         int getself_Hit();

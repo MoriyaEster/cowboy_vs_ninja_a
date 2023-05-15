@@ -8,16 +8,36 @@ namespace ariel
     Character::Character(Point location, int self_Hit, std::string name)
         : _location(location), _self_Hit(self_Hit), _name(name)
     {
-        _location = location;
-        _self_Hit = _self_Hit;
-        _name = name;
     }
 
     Character::Character()
+        : _location(Point()), _self_Hit(0), _name("Computer")
     {
-        _location = Point();
-        _self_Hit = 0;
-        _name = "Computer";
+    }
+
+    Character::Character(const Character& other)
+        : _location(other._location), _self_Hit(other._self_Hit), _name(other._name)
+    {
+    }
+
+    Character::~Character()
+    {
+    }
+
+    Character& Character::operator=(const Character& other)
+    {
+        if (this != &other)
+        {
+            _location = other._location;
+            _self_Hit = other._self_Hit;
+            _name = other._name;
+        }
+        return *this;
+    }
+
+    bool Character::operator==(const Character& other) const
+    {
+        return (_location == other._location && _self_Hit == other._self_Hit && _name == other._name);
     }
 
     // ************************************************************************//

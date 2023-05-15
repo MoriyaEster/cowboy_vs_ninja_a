@@ -17,10 +17,15 @@ namespace ariel
         _y = 0.0;
     }
 
-    Point::Point(Point &other)
+    Point::Point(const Point& other)
     {
         _x = other.getX();
-        _x = other.getY();
+        _y = other.getY();
+    }
+
+    Point::~Point()
+    {
+        // Destructor code goes here (if needed)
     }
 
     double Point::distance(Point dest)
@@ -30,17 +35,17 @@ namespace ariel
         return std::sqrt(dx * dx + dy * dy);
     }
 
-    double Point::getX()
+    double Point::getX() const
     {
         return this->_x;
     }
 
-    double Point::getY()
+    double Point::getY() const
     {
         return this->_y;
     }
 
-    void Point::print()
+    void Point::print() const
     {
         cout << "(" << _x << "," << _y << ")" << endl;
     }
@@ -50,13 +55,18 @@ namespace ariel
         return src;
     }
 
-    // Point &Point::operator=(const Point &other)
-    // {
-    //     if (this != &other)
-    //     {
-    //         _x = other._x;
-    //         _y = other._y;
-    //     }
-    //     return *this;
-    // }
+    bool Point::operator==(const Point& other) const
+    {
+        return (_x == other.getX() && _y == other.getY());
+    }
+
+    Point& Point::operator=(const Point& other)
+    {
+        if (this != &other)
+        {
+            _x = other._x;
+            _y = other._y;
+        }
+        return *this;
+    }
 }

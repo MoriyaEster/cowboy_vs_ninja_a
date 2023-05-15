@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Ninja.cpp"
+#include "Ninja.hpp"
 
 namespace ariel
 {
@@ -10,6 +10,9 @@ namespace ariel
 
     public:
         OldNinja(std::string name, Point location);
-        // OldNinja(std::string name);
+        OldNinja(const OldNinja& other); // copy constructor
+        ~OldNinja(); // destructor
+
+        bool operator==(const OldNinja& other) const; // operator== override
     };
 }

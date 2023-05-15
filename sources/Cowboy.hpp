@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Character.cpp"
+#include "Character.hpp"
 
 namespace ariel
 {
@@ -11,7 +11,8 @@ namespace ariel
 
     public:
         Cowboy(std::string name, Point location);
-        // Cowboy(std::string name);
+        // Cowboy(const Cowboy &other); // copy constructor
+        ~Cowboy(); // destructor
 
         void shoot(Character *target);
         bool hasboolets();
@@ -19,5 +20,7 @@ namespace ariel
 
         int getNum_Of_bolls();
         char getType();
+
+        bool operator==(const Cowboy &other); // equality operator
     };
 }

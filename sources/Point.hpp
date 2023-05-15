@@ -20,15 +20,19 @@ namespace ariel
     public:
         Point(double x, double y);
         Point();
-        Point(Point &other);
+        Point(const Point& other);
+        ~Point();
+
         double distance(Point dest);
 
-        double getX();
-        double getY();
+        double getX() const;
+        double getY() const;
 
-        void print();
+        void print() const;
 
         Point moveTowards(Point src, Point dst, double dis);
-        // Point &operator=(const Point &other);
+
+        bool operator==(const Point& other) const;
+        Point& operator=(const Point& other);
     };
 }

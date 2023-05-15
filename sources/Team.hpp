@@ -20,7 +20,7 @@ namespace ariel
     class Team
     {
     public:
-        vector <Character> team;
+        std::vector <Character> team;
         Character *leader;
 
         Team(Character *leader);
@@ -30,3 +30,12 @@ namespace ariel
     };
 
 }
+
+
+
+
+
+
+
+        // Team &operator=(const Team &other);
+        // bool operator==(const Team &other) const;
